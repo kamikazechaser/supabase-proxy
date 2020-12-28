@@ -1,16 +1,22 @@
 module.exports = {
-  supabaseUrl: "" || process.env.SUPABASE_URL,
-  supabaseConfig: {
-    jwtSecret: "" || process.env.SUPABASE_JWT_SECRET,
-    serviceApiKey: "" || process.env.SUPABASE_SERVICE_API_KEY,
-    cookieConfig: {
-      maxAge: 7 * 86400 || process.env.COOKIE_MAX_AGE,
-    },
+  supabaseUrl: "",
+  supabaseJwtSecret: "",
+  cookieConfig: {
+    domain: process.env.NODE_ENV === "production" ? "" : "localhost",
+    path: "/",
+    secure: process.env.NODE_ENV === "production" ? true : false,
+    httpOnly: true,
+    sameSite: true,
+    maxAge: 7 * 86400,
+  },
+  proxyConfig: {
+    cookieParsing: false,
+    anonApiKey: "",
   },
   serverConfig: {
-    logger: true || process.env.DEBUG,
+    logger: true,
   },
   gatewayConfig: {
-    port: 3000 || process.env.GATEWAY_PORT,
+    port: 3000,
   },
 };
