@@ -1,8 +1,10 @@
 module.exports = {
-  // Can be obrained from Supabase > Settings > API
+  // Can be obtained from Supabase > Settings > API
   supabaseUrl: "",
   supabaseJwtSecret: "",
+  // The cookie name is always "__auth"
   cookieConfig: {
+    // Modify cookie config below to suite your client-side app, using strong defaults
     domain: process.env.NODE_ENV === "production" ? "" : "localhost",
     path: "/",
     secure: process.env.NODE_ENV === "production" ? true : false,
@@ -16,11 +18,11 @@ module.exports = {
     officialClient: false,
     // Enable cookie parsing if you want to proxy with cookies
     cookieParsing: true,
-    // Can be obrained from Supabase > Settings > API
+    // Can be obtained from Supabase > Settings > API
     anonApiKey: "",
   },
   serverConfig: {
-    // Accepts Pino.js options
+    // Accepts Pino.js options for additional logger transports
     logger: true,
   },
   gatewayConfig: {
