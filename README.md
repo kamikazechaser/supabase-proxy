@@ -4,27 +4,25 @@
 
 ## What can it do?
 
-* [x] Reverse proxy to Supabase endpoint, compatible with official client
-* [x] Additional client logging
-* [ ] Information redaction post-logging, pre-proxing
-* [ ] Set JWT token in a `httpOnly` cookie
-* [ ] Cookie to Auth header translation
-* [ ] Longterm JWT tokens
-* [ ] Enable CORS
-* [ ] Admin endpoints
+* [x] Reverse proxy to the official Supabase endpoint, compatible with the official client
+* [x] Additional client logging if needed
+* [x] Information redaction post-logging, pre-proxing if needed
+* [x] Set JWT token in a long-term `httpOnly` cookie (more secure auth approach for browser-side)
+* [ ] Cookie to auth header translation for the reverse proxy
+* [ ] Enable CORS if needed
 
-## What advantages/disadvantages does it have over the Isomorphic client?
+## Usage
 
-### Advantages
+> This proxy is meant for use with the official instance, not self-hosted options
 
-* `httpOnly` cookies are more secure on the browser-side
-* Redact any information you don't want to send to Supabase e.g. client IP addresses
-* Can set long term JWT tokens without the need for refresh token logic
-* Gateway-level access control e.g. restrict IP addresses and additional logging
+* Update `config.js`
+* Start the gateway proxy with `npm start`
 
-### Disadvantages
+## Endpoints
 
-* Dedicated server needed for hosting
+* `/proxy` - Reverse proxy endpoint
+* `/auth/signup` - Create a user with email and password
+* `/auth/signin` - Signin and return a longterm JWT cookie
 
 ## License
 
