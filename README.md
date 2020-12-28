@@ -4,8 +4,8 @@
 
 ## What can it do?
 
-* [ ] Reverse proxy to Supabase endpoint, compatible with official client
-* [ ] Additional client logging
+* [x] Reverse proxy to Supabase endpoint, compatible with official client
+* [x] Additional client logging
 * [ ] Information redaction post-logging, pre-proxing
 * [ ] Set JWT token in a `httpOnly` cookie
 * [ ] Cookie to Auth header translation
