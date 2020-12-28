@@ -8,9 +8,7 @@
 * [x] Additional client logging if needed
 * [x] Information redaction post-logging, pre-proxing if needed
 * [x] Set JWT token in a long-term `httpOnly` cookie (more secure auth approach for browser-side)
-* [ ] Cookie to auth header translation for the reverse proxy
-* [ ] Enable CORS if needed
-
+* [x] Cookie to auth header translation for the reverse proxy
 ## Usage
 
 > This proxy is meant to be used with the official instance, not self-hosted options
