@@ -13,7 +13,7 @@
 
 ## Usage
 
-> This proxy is meant for use with the official instance, not self-hosted options
+> This proxy is meant to be used with the official instance, not self-hosted options
 
 * Update `config.js`
 * Start the gateway proxy with `npm start`

@@ -12,6 +12,8 @@ module.exports = {
     maxAge: 7 * 86400,
   },
   proxyConfig: {
+    // Enable if using the official supabase-js client
+    officialClient: false,
     // Enable cookie parsing if you want to proxy with cookies
     cookieParsing: true,
     // Can be obrained from Supabase > Settings > API
